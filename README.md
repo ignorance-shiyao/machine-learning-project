@@ -8,3 +8,8 @@ This is a machine learning project
 
 3. 项目地址：https://github.com/gulouguawen/machine-learning-project
 
+4.用到的库：
+  matplotlib
+  numpy
+  pandas
+  sklearn
