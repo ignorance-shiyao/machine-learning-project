@@ -8,7 +8,8 @@
 # @IDE：PyCharm
 # @File Name：test.py
 
-# module test
+# module import test
+
 import matplotlib
 import numpy
 import pandas
