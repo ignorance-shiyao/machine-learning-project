@@ -68,16 +68,16 @@ from db_ml.poi;
 -- λ mysql -u root -p --local-infile db_ml
 
 #导入数据到原始训练集表
-# load data local infile 'D:\\PycharmProjects\\project-0610\\machine_learning_project\\data\\train_July.csv'
-load data local infile '/Users/shiyao/OneDrive/DevFiles/machine-learning-project/data/train_July.csv'
+load data local infile 'D:\\DevFiles\\machine-learning-project\\data\\train_July.csv'
+# load data local infile '/Users/shiyao/OneDrive/DevFiles/machine-learning-project/data/train_July.csv'
     into table db_ml.train
     fields terminated by ','
     lines terminated by '\r\n'
     ignore 1 lines;
 
 #导入数据到天气表
-#   load data local infile 'D:\\PycharmProjects\\project-0610\\machine_learning_project\\data\\weather.csv'
-load data local infile '/Users/shiyao/OneDrive/DevFiles/machine-learning-project/data/weather.csv'
+  load data local infile 'D:\\DevFiles\\machine-learning-project\\data\\weather.csv'
+# load data local infile '/Users/shiyao/OneDrive/DevFiles/machine-learning-project/data/weather.csv'
     into table db_ml.weather
     fields terminated by ','
     lines terminated by '\r\n'
@@ -87,8 +87,8 @@ load data local infile '/Users/shiyao/OneDrive/DevFiles/machine-learning-project
      wind_speed, wind_scale);
 
 #导入数据到公共设施表
-#   load data local infile 'D:\\PycharmProjects\\project-0610\\machine_learning_project\\data\\poi.csv'
-load data local infile '/Users/shiyao/OneDrive/DevFiles/machine-learning-project/data/poi.csv'
+  load data local infile 'D:\\DevFiles\\machine-learning-project\\data\\poi.csv'
+# load data local infile '/Users/shiyao/OneDrive/DevFiles/machine-learning-project/data/poi.csv'
     into table db_ml.poi
     fields terminated by ','
 #     lines terminated by '\r\n'
