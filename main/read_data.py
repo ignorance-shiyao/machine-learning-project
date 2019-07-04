@@ -26,7 +26,7 @@ def getConnection():
     return conn
 
 
-train = pd.read_sql(sql="select * from t_train_real",
+train = pd.read_sql(sql="select * from db_ml.train_data",
                     con=getConnection())
 
 x = train.drop(labels="order_count", axis=1)
@@ -37,7 +37,7 @@ from sklearn.linear_model import LinearRegression
 lr = LinearRegression()
 lr.fit(x, y)
 
-test = pd.read_sql(sql="select * from db_ml.t_aug_test_real",
+test = pd.read_sql(sql="select * from db_ml.test_data",
                    con=getConnection())
 x_test = test[["s_petrol", "s_market", "s_uptown", "s_metro", "s_bus",
                "s_cafe",
