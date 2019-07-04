@@ -1,7 +1,6 @@
 #!/usr/bin/env python
 # -*- coding: UTF-8 -*-
 
-
 """
 @Project：machine-learning-project
 @Author：shiyao
@@ -44,7 +43,6 @@ x = train.drop(labels='order_count', axis=1)
 y = train[['order_count']]
 # print(x,y)
 
-
 # 采用线性模型
 lr = LinearRegression()
 lr.fit(x, y)
@@ -67,11 +65,12 @@ x_test = test[
 
 # 预测 order_count
 y_predict = lr.predict(x_test)
+
 # 将预测值存入model.csv
 with open('../output/model.csv', 'w') as f:
-    for i in y_predict:
-        for j in i:
-            f.write(str(j) + "\n")
+    for y in y_predict:
+        for z in y:
+            f.write(str(z) + "\n")
 
 print('y predict', y_predict)
 
