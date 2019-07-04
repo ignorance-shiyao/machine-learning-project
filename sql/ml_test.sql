@@ -12,7 +12,7 @@ create table db_ml.test
 -- λ mysql -u root -p --local-infile db_ml
 
 #导入数据到原始测试集
-load data local infile 'D:\\DevFiles\\machine-learning-project\\data\\test_Aug.csv'
+load data local infile 'D:\\DevFiles\\machine-learning-project\\data\\test_id_Aug_agg_private5k.csv'
 # load data local infile '/Users/shiyao/OneDrive/DevFiles/machine-learning-project/data/test_id_Aug_agg_private5k.csv'
     into table db_ml.test
     fields terminated by ','
@@ -141,4 +141,4 @@ set e_petrol     = 0,
     e_hotel      = 0
 where e_petrol is null;
 
-
+select * from db_ml.test_data;
